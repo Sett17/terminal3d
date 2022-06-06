@@ -12,7 +12,7 @@
 
 #define PI 3.14159265
 
-int FOV = 500;
+int FOV = 5000;
 int FAR_PLANE = 15;
 
 int width, height;
@@ -152,7 +152,7 @@ public:
       char c1;
       if (brightness1 < 0.5)
       {
-        c1 = '-';
+        c1 = '.';
       }
       else
       {
@@ -382,7 +382,7 @@ int main(int argc, char *argv[])
     size = center_y;
   }
   size /= 1.3;
-  size = 20;
+  // size = 20;
 
   printw("%d %d", width, height);
   move(1, 0);
