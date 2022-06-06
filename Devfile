@@ -1,0 +1,9 @@
+***build*t*+OBJ*
+gcc $(ls *.cpp) $(ncursesw5-config --cflags) $(ncursesw5-config --libs) -lm -fcommon -lstdc++ -o 3d
+if [ $? -eq 0 ]; then
+    echo "Build successful"
+else
+    echo "Build failed"
+    exit 1
+fi
+./3d ${DEV_OBJ:-torus.obj}
